@@ -1,0 +1,23 @@
+.why-us {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.why-us h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.why-us ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.why-us li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 8px;
+}

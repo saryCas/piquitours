@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos generales del header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
+  color: white;
+  z-index: 1000;
+}
+
+/* Cuando se hace scroll */
+.scrolled {
+  background: rgba(3, 6, 23, 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Contenedor */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1001;
+}
+
+/* Estilos del logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 140px;
+  width: 300px;
+  filter: none !important;
+  transition: none !important;
+  position: relative;
+  z-index: 1001;
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+}
+
+/* Lista de enlaces */
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  position: relative;
+  z-index: 1001;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  z-index: 1001;
+  border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  background-color: #021833;
+  border-radius: 12px;
+  border: 1px solid #1764757e;
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-toggle {
+  background-color: var(--highlight-color);
+  color: var(--text-color-light);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 2rem; /* Mover a la derecha */
+  margin-right: 1rem; /*Separar del borde derecho;*/
+  width: 40px;
+  height: 40px;
+  border-radius: 1000px;
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color-light);
+  
+}
+
+
+@media (prefers-color-scheme: light) {
+  * {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+  }
+  .nav-links a {
+    color: #030303;
+  }
+  .nav-links a:hover {
+    background-color: #f9f9f9;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
