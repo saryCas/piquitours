@@ -1,37 +1,97 @@
-import React, { useEffect } from 'react';
-import './styles/Hero.css';
+// Hero.jsx
+import React, { useEffect, useState } from 'react';
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { TbWorld } from 'react-icons/tb';
+import './styles/Hero.css'
+const TEXTS = [
+  "Viajes inolvidables en Colombia",
+  "Experiencias únicas en Colombia",
+  "Aventuras personalizadas",
+  "Turismo sostenible y responsable"
+];
 
 export default function Hero() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
-    const textElement = document.querySelector('.animated-text');
-    const text = "Viajes inolvidables en Colombia y más allá...";
-    let index = 0;
-    let isDeleting = false;
-    const typingSpeed = 100;
-    const deletingSpeed = 80;
-
-    function type() {
-      if (isDeleting) {
-        textElement.textContent = text.substring(0, index--);
-        if (index < 0) {
-          isDeleting = false;
-        }
-      } else {
-        textElement.textContent = text.substring(0, index++);
-        if (index === text.length) {
-          isDeleting = true;
-        }
-      }
-      setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
-    }
-
-    type();
+    const interval = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % TEXTS.length);
+    }, 4000);
+    
+    return () => clearInterval(interval);
   }, []);
+
+  const handleScroll = () => {
+    const destination = document.querySelector('.destinos');
+    if (destination) {
+      destination.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
 
   return (
     <section className="hero">
-      <h1>Explora los Mejores Destinos con Piquitours</h1>
-      <h2 className="animated-text"></h2>
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        playsInline 
+        className="hero-video"
+        poster="/video-poster.jpg"
+      >
+        <source src="/video-optimized.mp4" type="video/mp4" />
+        <source src="/video-optimized.webm" type="video/webm" />
+        Tu navegador no soporta el video.
+      </video>
+
+      <div className="hero-content">
+        <h1>
+          <span>Explora el Mundo</span><br />
+          con Piquitours
+        </h1>
+        
+        <div className="animated-text-container">
+          {TEXTS.map((text, index) => (
+            <div 
+              key={text}
+              className={`animated-text ${index === currentIndex ? 'active' : ''}`}
+              aria-hidden={index !== currentIndex}
+            >
+              {text}
+            </div>
+          ))}
+        </div>
+
+        <button 
+          className="button-continue"
+          onClick={handleScroll}
+          aria-label="Explorar destinos"
+        >
+          Descubre tu próxima aventura
+          <span className="arrow-down">↓</span>
+        </button>
+      </div>
+
+      <div className="redes-sociales">
+        <a href="https://facebook.com" target="_blank" rel="noreferrer">
+          <FaFacebook />
+          <span>Síguenos</span>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <FaInstagram />
+          <span>Inspírate</span>
+        </a>
+        <a href="https://whatsapp.com" target="_blank" rel="noreferrer">
+          <FaWhatsapp />
+          <span>Contáctanos</span>
+        </a>
+        <a href="https://piquitours.com" target="_blank" rel="noreferrer">
+          <TbWorld />
+          <span>Nuestra Web</span>
+        </a>
+      </div>
     </section>
   );
 }

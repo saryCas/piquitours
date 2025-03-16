@@ -1,31 +1,20 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaSun, FaMoon } from 'react-icons/fa'; // Importar iconos
+import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 import "./styles/Header.css";
-
+// !important 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem('darkMode');
     return savedTheme ? JSON.parse(savedTheme) : window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    const handleThemeChange = (e) => {
-      setDarkMode(e.matches);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleThemeChange);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', handleThemeChange);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -33,26 +22,49 @@ export default function Header() {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
 
-  const toggleDarkMode = () => {
-    setDarkMode(prevMode => !prevMode);
-  };
+  useEffect(() => {
+    document.body.classList.toggle('no-scroll', menuOpen);
+    return () => document.body.classList.remove('no-scroll');
+  }, [menuOpen]);
+
+  const toggleDarkMode = () => setDarkMode(prev => !prev);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <div className="container">
         <div className="logo-container">
-          <img className="logo" src="/logo.png" alt="Piquitours y Eventos (LOGO)." />
+          <img 
+            className="logo" 
+            src="/logo.png" 
+            alt="Piquitours y Eventos" 
+          />
         </div>
-        <nav className="nav">
+
+        <nav className={`nav ${menuOpen ? "open" : ""}`}>
           <ul className="nav-links">
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/destinos">Destinos</Link></li>
-            <li><Link to="/nosotros">Nosotros</Link></li>
-            <li><Link to="/contacto">Contacto</Link></li>
+            <li><Link to="/" onClick={closeMenu}>Inicio</Link></li>
+            <li><Link to="/destinos" onClick={closeMenu}>Destinos</Link></li>
+            <li><Link to="/nosotros" onClick={closeMenu}>Nosotros</Link></li>
+            <li><Link to="/contacto" onClick={closeMenu}>Contacto</Link></li>
+            <li>
+              <button 
+                className="theme-toggle" 
+                onClick={toggleDarkMode}
+                aria-label="Toggle theme"
+              >
+                {darkMode ? <FaSun /> : <FaMoon />}
+              </button>
+            </li>
           </ul>
         </nav>
-        <button className="theme-toggle" onClick={toggleDarkMode}>
-          {darkMode ? <FaSun /> : <FaMoon />} {/* Mostrar icono */}
+
+        <button 
+          className="menu-toggle" 
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
     </header>

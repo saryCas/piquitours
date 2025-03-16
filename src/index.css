@@ -13,27 +13,27 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  text-decoration: none !important;
+  
+}
 
-/* body {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
+body {
   margin: 0;
   padding: 0;
-} */
-/* 
-body.light-mode {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
 }
+
 body.dark-mode {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
-} */
+}
 
-h1,
-h2,
-h3,
-nav {
+body:not(.dark-mode) {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+h1, h2, h3, nav {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
