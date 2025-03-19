@@ -9,6 +9,68 @@
   isolation: isolate;
 }
 
+
+/* Modo claro */
+body:not(.dark-mode) .why-us {
+  background: linear-gradient(45deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(245, 245, 245, 0.95) 100%);
+  color: #333;
+}
+
+body:not(.dark-mode) .why-us h2 {
+  background: linear-gradient(45deg, #0077B6 30%, #0099FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body:not(.dark-mode) .why-us h2::after {
+  background: linear-gradient(90deg, #0077B6, #0099FF);
+}
+
+body:not(.dark-mode) .feature-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 119, 182, 0.15);
+  color: #333;
+}
+
+body:not(.dark-mode) .feature-card h3 {
+  color: #0077B6;
+}
+
+body:not(.dark-mode) .feature-card p {
+  color: rgba(51, 51, 51, 0.9);
+}
+
+body:not(.dark-mode) .why-us-tab {
+  background: rgba(0, 119, 182, 0.1);
+  color: #0077B6;
+  border: 1px solid rgba(0, 119, 182, 0.2);
+}
+
+body:not(.dark-mode) .why-us-tab.active {
+  background: linear-gradient(45deg, #0077B6, #0099FF);
+  color: white;
+  box-shadow: 0 5px 20px rgba(0, 119, 182, 0.2);
+}
+
+body:not(.dark-mode) .why-us-badge {
+  background: linear-gradient(45deg, #0077B6, #0099FF);
+  color: white;
+}
+
+body:not(.dark-mode) .feature-icon {
+  background: linear-gradient(45deg, #0077B6, #0099FF);
+}
+
+body:not(.dark-mode) .why-us::before {
+  opacity: 0.15;
+}
+
+/* ***************************************** */
+
+
+
 .why-us::before {
   content: '';
   position: absolute;
@@ -24,7 +86,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: clamp(2rem, 4vw, 4rem);
-  align-items: center;
+  align-items: start;
+  /* Cambiado de center a start */
 }
 
 @media (min-width: 768px) {
@@ -37,6 +100,8 @@
   position: relative;
   padding-right: 0;
   order: 2;
+  min-height: 600px;
+  /* Nueva propiedad añadida */
 }
 
 @media (min-width: 1024px) {
@@ -44,6 +109,28 @@
     padding-right: clamp(2rem, 5vw, 6rem);
     order: initial;
   }
+}
+
+/* Nuevas reglas para el sistema de tabs estable */
+.tab-content-container {
+  position: relative;
+  min-height: 500px;
+  /* Altura mínima basada en contenido más largo */
+}
+
+.tab-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.tab-content.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .why-us-visual {
@@ -189,6 +276,7 @@
   white-space: nowrap;
   transition: all 0.3s ease;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .why-us-tab.active {
@@ -235,3 +323,24 @@
     animation: none;
   }
 }
+
+
+/* Modo claro */
+
+body:not(.dark-mode) #why-us-x {
+  background: linear-gradient(45deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.95) 100%);
+  color: #000;
+}
+
+body:not(.dark-mode) #whi-us-tabs-x>* {
+  color: black;
+  background-color: #f3f3f3;
+}
+
+body:not(.dark-mode) #feature-text-x {
+  color: black;
+}
+
+/* ***************************************** */

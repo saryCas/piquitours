@@ -27,7 +27,6 @@ export default function WhyUs() {
             {tabs.map(tab => (
               <div
                 key={tab.id}
-                id={`why-us-tab ${activeTab === tab.id ? 'active' : ''}`}
                 className={`why-us-tab ${activeTab === tab.id ? 'active' : ''}`}
                 onClick={() => setActiveTab(tab.id)}
               >
@@ -36,17 +35,16 @@ export default function WhyUs() {
             ))}
           </div>
 
-          {activeTab === 'experiencia' && (
+          <div className="tab-content-container">
+            {/* Contenido Experiencia */}
             <motion.div
+              className={`tab-content ${activeTab === 'experiencia' ? 'active' : ''}`}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              animate={{ opacity: activeTab === 'experiencia' ? 1 : 0 }}
               transition={{ duration: 0.4 }}
             >
-              <p className="feature-text">
-                {/* Con más de 15 años creando experiencias inolvidables, nuestro equipo de expertos 
-                locales combina conocimiento profundo con pasión por el turismo sostenible. 
-                Cada itinerario es cuidadosamente diseñado para ofrecer autenticidad y lujo. */}
-                 Con más de x años creando experiencias inolvidables... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum minima ipsam sunt, rem suscipit officia maxime maiores debitis dicta magni quam temporibus nam perspiciatis libero veniam quo placeat molestias ea.
+              <p className="feature-text" id='feature-text-x'>
+                Con más de x años creando experiencias inolvidables... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum minima ipsam sunt, rem suscipit officia maxime maiores debitis dicta magni quam temporibus nam perspiciatis libero veniam quo placeat molestias ea.
               </p>
               
               <div className="feature-grid">
@@ -59,10 +57,51 @@ export default function WhyUs() {
                 </div>
               </div>
             </motion.div>
-          )}
 
-          {/* Contenido de otros tabs */}
+            {/* Contenido Servicios */}
+            <motion.div
+              className={`tab-content ${activeTab === 'servicios' ? 'active' : ''}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: activeTab === 'servicios' ? 1 : 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <p className="feature-text" id='feature-text-x'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptates voluptatem doloremque, quidem quibusdam quod, voluptatum, quia quae voluptas quas doloribus. Quisquam voluptates voluptatem doloremque, quidem quibusdam quod.
+              </p>
+              
+              <div className="feature-grid">
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1067/1067555.png" alt="Servicios" />
+                  </div>
+                  <h3>Servicios Exclusivos</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum accusamus asperiores ipsa? Tenetur incidunt facere vered</p>
+                </div>
+              </div>
+            </motion.div>
 
+            {/* Contenido Tecnología */}
+            <motion.div
+              className={`tab-content ${activeTab === 'tecnologia' ? 'active' : ''}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: activeTab === 'tecnologia' ? 1 : 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <p className="feature-text" id='feature-text-x'>
+                Tecnología de última generación... Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum minima ipsam sunt, rem suscipit officia maxime maiores debitis dicta magni quam temporibus nam perspiciatis libero veniam quo placeat molestias ea.
+              </p>
+              
+              <div className="feature-grid">
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/809/809964.png" alt="Tecnología" />
+                  </div>
+                  <h3>Innovación Constante</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum accusamus asperiores ipsa? Tenetur incidunt facere vered</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
 
         <motion.div 
@@ -84,7 +123,7 @@ export default function WhyUs() {
         </motion.div>
       </div>
 
-      {/* Sección adicional */}
+      {/* Sección adicional de características */}
       <div className="feature-grid">
         <motion.div 
           className="feature-card"

@@ -29,7 +29,6 @@ body.dark-mode .footer {
 body:not(.dark-mode) .header,
 body:not(.dark-mode) .hero,
 body:not(.dark-mode) .destinations-section,
-
 body:not(.dark-mode) .why-us,
 body:not(.dark-mode) .why-us-container,
 body:not(.dark-mode) #why-us-x,
@@ -39,31 +38,7 @@ body:not(.dark-mode) .hero-content h1  {
   background-color: var(--background-color-light);
   color: var(--text-color-light);
 }
-body:not(.dark-mode) .destination-card,
-body:not(.dark-mode) .card-header > h3,
-body:not(.dark-mode) #card-description-01 {
-  background-color: #f5f5f5;
-  color: var(--text-color-light);
-}
-body:not(.dark-mode) .destination-card > * {
-}
 
-body:not(.dark-mode) #why-us-x {
-  background: linear-gradient(45deg,
-        rgba(255, 255, 255, 0.95) 0%,
-        rgba(255, 255, 255, 0.95) 100%);
-  color: #000;
-}
-.body:not(.dark-mode) #why-us-x > *, body:not(.dark-mode) #whi-us-tabs-x > * {
-  color: black;
-}
-
-body:not(.dark-mode) #whi-us-tabs-x>*, body:not(.dark-mode) #why-us-tab-x  {
-  /* background:; */
-}
-body:not(.dark-mode) #active {
-  background-color: red !important;
-}
 
 
 #root {

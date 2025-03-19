@@ -332,3 +332,14 @@ p {
     font-size: 0.85rem;
   }
 }
+
+/* Modo claro */
+
+body:not(.dark-mode) .destination-card,
+body:not(.dark-mode) .card-header>h3,
+body:not(.dark-mode) #card-description-01 {
+  background-color: #f5f5f5;
+  color: var(--text-color-light);
+}
+
+/* **************************************** */
