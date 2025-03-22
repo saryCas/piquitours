@@ -1,0 +1,278 @@
+/* styles/Nosotros.css */
+.nosotros-container {
+  background: #0f172a;
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: none;
+}
+
+/* Hero Section */
+.hero-nosotros {
+  position: relative;
+  padding: 8rem 2rem;
+  background: linear-gradient(45deg, #1e3a8a, #0f172a);
+  text-align: center;
+}
+
+.hero-heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 3rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  background: linear-gradient(45deg, #38bdf8, #0ea5e9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  color: #38bdf8;
+}
+
+/* Historia Corporativa */
+.historia-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 4rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, #38bdf8, #0ea5e9);
+}
+
+.timeline-event {
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.8rem;
+  top: 2rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #38bdf8;
+  border: 3px solid #0f172a;
+}
+
+/* Sección Equipo - Corregido */
+.equipo-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(45deg, #0f172a, #1e3a8a);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  perspective: 1000px;
+  aspect-ratio: 3/4;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0, 153, 255, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.team-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-front {
+  background: rgba(255, 255, 255, 0.05);
+  justify-content: center;
+}
+
+.card-back {
+  background: linear-gradient(45deg, #0099ff, #0066cc);
+  transform: rotateY(180deg);
+  justify-content: center;
+}
+
+/* Corrección del texto invertido */
+.bio-content {
+  transform: rotateY(180deg);
+  /* FIX: Corrige la orientación del texto */
+  width: 100%;
+  text-align: center;
+}
+
+.avatar-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #38bdf8;
+  transition: transform 0.3s ease;
+}
+
+.avatar-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-links a:hover {
+  background: #38bdf8;
+  transform: translateY(-3px);
+}
+
+/* Filosofía */
+.philosophy-section {
+  padding: 6rem 2rem;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.philosophy-item {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.philosophy-item:hover {
+  transform: translateY(-5px);
+}
+
+.philosophy-icon {
+  font-size: 3rem;
+  color: #38bdf8;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-stats {
+    flex-direction: column;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-marker {
+    left: -10px;
+  }
+
+  .card-back {
+    display: none;
+  }
+
+  .team-card:hover .card-inner {
+    transform: none;
+  }
+}
+
+@media (hover: none) {
+  .card-back {
+    display: block;
+    transform: none;
+    position: relative;
+    backface-visibility: visible;
+  }
+
+  .team-card .card-inner {
+    transform-style: flat;
+  }
+}

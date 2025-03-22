@@ -3,7 +3,6 @@ import Header from "../components/Header";
 export default function Destinos() {
   return (
     <div>
-      <Header />
       <div className="container">
         <div className="row">
           <div className="col-md-12">
