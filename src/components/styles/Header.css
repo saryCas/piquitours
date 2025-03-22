@@ -228,9 +228,7 @@ body:not(.dark-mode) {
     color: #1a1a1a;
   }
 
-  .nav {
-    /* background: rgba(255, 255, 255, 0.98); */
-  }
+  
 }
 
 /* ===== BLOQUEO DE SCROLL ===== */

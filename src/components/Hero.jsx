@@ -33,19 +33,6 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <video 
-        autoPlay 
-        muted 
-        loop 
-        playsInline 
-        className="hero-video"
-        poster="/video-poster.jpg"
-      >
-        <source src="/video-optimized.mp4" type="video/mp4" />
-        <source src="/video-optimized.webm" type="video/webm" />
-        Tu navegador no soporta el video.
-      </video>
-
       <div className="hero-content">
         <h1>
           <span>Explora el Mundo</span><br />
