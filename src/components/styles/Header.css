@@ -283,7 +283,7 @@ body:not(.dark-mode) {
   }
     @media (max-width: 768px) {
       .nav {
-        background: #ffffffaf;
+        background: #ffffffe5;
       }
       .nav-links a {
         background-color: #f3f3f3;
