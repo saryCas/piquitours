@@ -64,11 +64,11 @@ export default function Hero() {
       <div className="redes-sociales">
         <a href="https://facebook.com" target="_blank" rel="noreferrer">
           <FaFacebook />
-          <span>Síguenos</span>
+          <span>Facebook</span>
         </a>
         <a href="https://instagram.com" target="_blank" rel="noreferrer">
           <FaInstagram />
-          <span>Inspírate</span>
+          <span>Instagram</span>
         </a>
         <a href="https://whatsapp.com" target="_blank" rel="noreferrer">
           <FaWhatsapp />

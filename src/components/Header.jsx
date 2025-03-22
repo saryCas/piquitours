@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 import "./styles/Header.css";
-// !important 
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
@@ -49,11 +49,13 @@ export default function Header() {
             <li><Link to="/contacto" onClick={closeMenu}>Contacto</Link></li>
             <li>
               <button 
-                className="theme-toggle" 
+                className={`theme-toggle ${darkMode ? 'dark' : ''}`} 
                 onClick={toggleDarkMode}
                 aria-label="Toggle theme"
               >
-                {darkMode ? <FaSun /> : <FaMoon />}
+                <div className="toggle-thumb">
+                  {darkMode ? <FaSun /> : <FaMoon />}
+                </div>
               </button>
             </li>
           </ul>
