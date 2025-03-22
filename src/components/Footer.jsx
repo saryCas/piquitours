@@ -11,10 +11,18 @@ export default function Footer() {
     });
   };
 
+  const openWhatsApp = () => {
+    window.open('https://wa.me/3003864339', '_blank');
+  };
+
   return (
     <footer className="footer">
       <div className="back-to-top" onClick={scrollToTop}>
         <FaArrowUp className="arrow-icon" />
+      </div>
+
+      <div className="floating-whatsapp" onClick={openWhatsApp}>
+        <FaWhatsapp className="whatsapp-icon" />
       </div>
       
       <div className="footer-content">

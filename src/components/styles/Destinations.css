@@ -178,6 +178,7 @@ p {
   top: clamp(0.8rem, 1.5vw, 2rem);
   right: clamp(0.8rem, 1.5vw, 2rem);
   background: rgba(0, 0, 0, 0.6);
+  color: orange;
   padding: clamp(0.5rem, 1vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.5rem);
   border-radius: 35px;
   display: flex;
@@ -333,13 +334,23 @@ p {
   }
 }
 
-/* Modo claro */
-
-body:not(.dark-mode) .destination-card,
-body:not(.dark-mode) .card-header>h3,
-body:not(.dark-mode) #card-description-01 {
-  background-color: #f5f5f5;
-  color: var(--text-color-light);
+/* ***** MODO CLARO ***** */
+body:not(.dark-mode) .destinations-section {
+  background-color: var(--background-color-light);
 }
 
-/* **************************************** */
+body:not(.dark-mode) .destination-card {
+  background: #F3F3F3;
+}
+body:not(.dark-mode) .card-header>h3 {
+  color: var(--text-color-light);
+}
+body:not(.dark-mode) #card-description-01 {
+  color: var(--text-color-light);
+}
+body:not(.dark-mode) .floating-particle{
+  background: hsla(213, 69%, 69%, 0.573);
+  filter: blur(3px);
+}
+/* ********** */
+

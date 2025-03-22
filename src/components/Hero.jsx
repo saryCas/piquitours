@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   const handleScroll = () => {
-    const destination = document.querySelector('.destinos');
+    const destination = document.querySelector('.destinations-section');
     if (destination) {
       destination.scrollIntoView({
         behavior: 'smooth',

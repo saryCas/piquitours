@@ -38,7 +38,7 @@ const DestinationCard = ({ destination, index }) => {
         />
         
         <div className="rating-badge">
-          <FiStar className="star-icon" />
+           ⭐
           <span>{destination.rating}</span>
         </div>
       </div>

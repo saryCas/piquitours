@@ -17,28 +17,14 @@ body {
   margin-top: 135px; /* Ajustar el margen superior para que el contenido no quede detrás del Header */
 }
 
-body.dark-mode .header,
-body.dark-mode .hero,
-body.dark-mode .destinations,
-body.dark-mode .why-us,
-body.dark-mode .footer {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}
+/* 
+  Modo claro 
 
-body:not(.dark-mode) .header,
-body:not(.dark-mode) .hero,
-body:not(.dark-mode) .destinations-section,
-body:not(.dark-mode) .why-us,
-body:not(.dark-mode) .why-us-container,
-body:not(.dark-mode) #why-us-x,
-body:not(.dark-mode) .footer,
-body:not(.dark-mode) .hero-content h1 > span,
-body:not(.dark-mode) .hero-content h1  {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
-}
-
+  body:not(.dark-mode) {
+    estilo para el modo claro... 
+  } 
+************************************** 
+*/
 
 
 #root {

@@ -274,3 +274,27 @@
     background-position: 200% 0;
   }
 }
+
+/* ***** MODO CLARO ***** */
+body:not(.dark-mode) {
+  .hero {
+      background-color: var(--background-color-light);
+      color: var(--text-color-light);
+    }
+
+  .hero-content h1 {
+      background-color: var(--background-color-light);
+      color: var(--text-color-light);
+    }
+
+  .hero::before {
+      background: linear-gradient(45deg,
+      #bedf06 0%,
+      #67dc08 25%,
+      transparent 50%,
+      #0907a5 75%,
+      #0066cc 100%);
+    }
+}
+/* ********** */
+
