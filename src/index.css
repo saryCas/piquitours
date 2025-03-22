@@ -72,3 +72,60 @@ a:hover {
     background-color: #f9f9f9;
   }
 }
+
+
+/* index.css */
+/* Añade esto al final de tu archivo */
+
+/* ESTILOS SEGUROS PARA SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Fondo de la barra */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+
+
+/* Barra deslizante */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlight-color);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Modo oscuro */
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: rgba(0, 153, 255, 0.6);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 153, 255, 0.9);
+}
+
+/* Modo claro */
+body:not(.dark-mode) ::-webkit-scrollbar-thumb {
+  background: rgba(0, 119, 182, 0.4);
+}
+
+body:not(.dark-mode) ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 119, 182, 0.8);
+}
+
+/* Firefox */
+* {
+  scrollbar-color: var(--primary-color) transparent;
+  scrollbar-width: thin;
+}

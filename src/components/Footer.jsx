@@ -12,7 +12,7 @@ export default function Footer() {
   };
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/3003864339', '_blank');
+    window.open('https://wa.me/+573003864339', '_blank');
   };
 
   return (

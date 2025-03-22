@@ -2,7 +2,7 @@
 
 ![Portada](./public/preview.webp)
 
-¡Bienvenido a Piquitours y Eventos! Este proyecto está diseñado para gestionar y organizar tours y eventos de manera eficiente.
+Este proyecto está diseñado para gestionar y organizar tours y eventos de manera eficiente de la empresa Piquitours y eventos.
 
 ## Descripción
 
