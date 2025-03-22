@@ -1,6 +1,8 @@
 # Piquitours y Eventos
 
-¡Bienvenido a Piquitours y Eventos! Este proyecto está diseñado para gestionar y organizar tours y eventos de manera eficiente de dicha empresa.
+![Portada](./public/preview.webp)
+
+¡Bienvenido a Piquitours y Eventos! Este proyecto está diseñado para gestionar y organizar tours y eventos de manera eficiente.
 
 ## Descripción
 
@@ -16,73 +18,87 @@ Piquitours y Eventos es una plataforma que permite a los usuarios explorar, rese
 
 ## Instalación
 
-Sigue estos pasos para instalar y configurar el proyecto en tu máquina local:
-
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/piquitours-y-eventos.git
+   git clone https://github.com/rx3card/piquitours
    ```
 
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd piquitours-y-eventos
+   cd piquitours
    ```
 
 3. Instala las dependencias:
+
+   Si tienes `pnpm` instalado:
 
    ```bash
    pnpm install
    ```
 
-4. Configura las variables de entorno:
-   Crea un archivo `.env` en la raíz del proyecto y añade las siguientes variables:
+   Si no tienes `pnpm`, instálalo con el siguiente comando:
 
+   ```bash
+   npm install -g pnpm
    ```
+
+   O usa `npm` directamente:
+
+   ```bash
+   npm install
+   ```
+
+4. Configura las variables de entorno en un archivo `.env`:
+
+   ```env
    DB_HOST=tu_host_de_base_de_datos
    DB_USER=tu_usuario_de_base_de_datos
    DB_PASS=tu_contraseña_de_base_de_datos
    ```
 
 5. Inicia el servidor:
+
+   Si usas `pnpm`:
+
    ```bash
    pnpm run dev
    ```
 
+   O con `npm`:
+
+   ```bash
+   npm run dev
+   ```
+
 ## Uso
 
-Una vez que el servidor esté en funcionamiento, puedes acceder a la aplicación en tu navegador web en `http://localhost:5173`. Desde allí, podrás explorar los tours y eventos disponibles, realizar reservas y gestionar tu cuenta.
+Accede a la aplicación en `http://localhost:5173` para explorar tours, realizar reservas y gestionar tu cuenta.
 
-## Contribución
+## Tecnologías Utilizadas
 
-Si deseas contribuir a este proyecto, sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una nueva rama para tu función o corrección de errores:
-
-   ```bash
-   git checkout -b nombre-de-tu-rama
-   ```
-
-3. Realiza tus cambios y haz commit:
-
-   ```bash
-   git commit -m "Descripción de tus cambios"
-   ```
-
-4. Sube tus cambios a tu repositorio fork:
-
-   ```bash
-   git push origin nombre-de-tu-rama
-   ```
-
-5. Abre un pull request en el repositorio original.
+<p align="center">
+  <img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat-square" alt="HTML5">
+  <img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat-square" alt="CSS3">
+  <img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat-square" alt="React">
+  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat-square" alt="JavaScript">
+  <img src="https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat-square" alt="Node.js">
+  <!-- <img src="https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white&style=flat-square" alt="TypeScript"> -->
+  <!-- <img src="https://img.shields.io/badge/-Express-000000?logo=express&logoColor=white&style=flat-square" alt="Express"> -->
+  <!-- <img src="https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white&style=flat-square" alt="PostgreSQL"> -->
+  <!-- <img src="https://img.shields.io/badge/-Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white&style=flat-square" alt="Tailwind CSS"> -->
+  <!-- <img src="https://img.shields.io/badge/-Redux-764ABC?logo=redux&logoColor=white&style=flat-square" alt="Redux"> -->
+  <!-- <img src="https://img.shields.io/badge/-JWT-000000?logo=jsonwebtokens&logoColor=white&style=flat-square" alt="JWT"> -->
+  <!-- <img src="https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white&style=flat-square" alt="Docker"> -->
+  <img src="https://img.shields.io/badge/-Vercel-000000?logo=vercel&logoColor=white&style=flat-square" alt="Vercel">
+  <img src="https://img.shields.io/badge/-React%20Motion-61DAFB?logo=react&logoColor=white&style=flat-square" alt="React Motion">
+</p>
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
 ---
 
-¡Esta pagina es de Piquitours y Eventos! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con ellos.
+<a href='https://github.com/rx3card'>rx3card Oscar Rojas.</a>
