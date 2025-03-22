@@ -182,10 +182,10 @@
 
   .nav {
     position: fixed;
-    top: 120px;
+    top: 90px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 90px);
     background: rgba(3, 6, 23, 0.98);
     backdrop-filter: blur(15px);
     flex-direction: column;
@@ -281,6 +281,14 @@ body:not(.dark-mode) {
   .menu-toggle {
     color: #1a1a1a;
   }
+    @media (max-width: 768px) {
+      .nav {
+        background: #ffffffaf;
+      }
+      .nav-links a {
+        background-color: #f3f3f3;
+      }
+    }
 }
 
 /* ===== BLOQUEO DE SCROLL ===== */

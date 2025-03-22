@@ -211,7 +211,8 @@
   position: fixed;
   bottom: clamp(1.5rem, 3vw, 2rem);
   right: clamp(5.5rem, 10vw, 6rem); /* Ajustar para dejar espacio al botón de WhatsApp */
-  background: #0086EC;
+  background: #0086ecde;
+  backdrop-filter: blur(3px);
   color: #000;
   width: clamp(50px, 8vw, 60px);
   height: clamp(50px, 8vw, 60px);
@@ -234,7 +235,8 @@
   position: fixed;
   bottom: clamp(1.5rem, 3vw, 2rem); /* Alinear con el botón "back-to-top" */
   right: clamp(1.5rem, 3vw, 2rem); /* Ubicar al lado del botón "back-to-top" */
-  background-color: #25D366;
+  background-color: #25d365a9;
+  backdrop-filter: blur(3px);
   color: #fff;
   border-radius: 50%;
   width: 50px;
@@ -373,8 +375,13 @@ body:not(.dark-mode) .footer-bottom {
 }
 
 body:not(.dark-mode) .back-to-top {
-  background: var(--primary-color);
   box-shadow: 0 0 25px rgba(0, 119, 182, 0.15);
 }
+
+body:not(.dark-mode) .newsletter-text, .footer-bottom > * {
+  color: var(--text-color-light);
+}
+
+
 
 /* ******************************************* */

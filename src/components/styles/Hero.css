@@ -195,7 +195,6 @@
   }
 }
 
-/* Añade esto al final de Hero.css */
 .hero::after {
   content: '';
   position: absolute;
@@ -284,6 +283,20 @@ body:not(.dark-mode) {
       transparent 50%,
       #0907a5 75%,
       #0066cc 100%);
+    }
+  
+  .redes-sociales {
+      background-color: #F3F3F3;
+  }
+  .redes-sociales a {
+    color:  var(--text-color-light);;
+  }
+    .hero::after {
+      background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(17, 255, 0, 0.8) 30%,
+            rgba(255, 234, 0, 0.8) 70%,
+            transparent 100%);
     }
 }
 /* ********** */
