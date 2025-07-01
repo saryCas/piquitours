@@ -92,7 +92,7 @@ const Destinations = () => {
     {
       title: "Expedición Amazonas",
       description: "Aventura de 7 días en la selva con alojamiento premium y guías expertos",
-      image: "",
+      image: "/p7.jpeg",
       rating: 4.9,
       price: 0
     },
