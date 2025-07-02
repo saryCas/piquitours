@@ -92,14 +92,14 @@ const Destinations = () => {
     {
       title: "Expedición Amazonas",
       description: "Aventura de 7 días en la selva con alojamiento premium y guías expertos",
-      image: "https://probarranquilla.org/wp-content/uploads/2022/10/Banner-barranquilla5.jpg",
+      image: "/p7.jpeg",
       rating: 4.9,
       price: 0
     },
     {
       title: "Tesoro Tayrona",
       description: "Caminata épica de 5 días hacia la ciudad perdida, incluye camping de lujo",
-      image: "https://cdn-ilcfjhh.nitrocdn.com/AMsOVcaxJEBiDUJmLghgteLoXmGyZJhB/assets/images/optimized/rev-4df4e7f/cartagena-tours.co/wp-content/uploads/2022/11/carthagene%C2%A9leandro-loureiro.jpg",
+      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Felcomercio.pe%2Frespuestas%2Fcuando%2Fdia-mundial-de-la-leche-desde-cuando-y-por-que-se-celebra-tdpe-noticia%2F&psig=AOvVaw1bJiwlKappDXsnfv0i9zcO&ust=1751499057366000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDoosvonI4DFQAAAAAdAAAAABAE",
       rating: 4.8,
       price: 0
     },
