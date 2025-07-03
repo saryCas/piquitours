@@ -1,4 +1,3 @@
-// pages/Nosotros.jsx
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Header from "../components/Header";
@@ -79,7 +78,7 @@ const TeamCard = ({ member, index }) => {
               src={member.photo} 
               alt={member.name}
               onError={(e) => {
-                e.target.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+                e.target.src = 'data:image/png;base64,iVBORw0KGgoAAAព0x0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
                 e.target.alt = 'Imagen no disponible';
               }}
             />
@@ -109,101 +108,97 @@ export default function Nosotros() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <>
-      <h1>Nosotros</h1>
-    <div className="nosotros-container">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="hero-nosotros">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="hero-heading"
-        >
-          Más de una década creando<br />
-          <span className="highlight">experiencias inolvidables</span>
-        </motion.h1>
+    <main>
+      <div className="nosotros-container">
+        <h1>Nosotros</h1>
+        <Header />
         
-        <div className="hero-stats">
-          <div className="stat-item">
-            <FaBus className="stat-icon" />
-            <div>
-              <h3>15K+</h3>
-              <p>Viajeros transportados</p>
+        <section className="hero-nosotros">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="hero-heading"
+          >
+            Más de una década creando<br />
+            <span className="highlight">experiencias inolvidables</span>
+          </motion.h1>
+          
+          <div className="hero-stats">
+            <div className="stat-item">
+              <FaBus className="stat-icon" />
+              <div>
+                <h3>15K+</h3>
+                <p>Viajeros transportados</p>
+              </div>
+            </div>
+            <div className="stat-item">
+              <FaMapMarkedAlt className="stat-icon" />
+              <div>
+                <h3>50+</h3>
+                <p>Destinos nacionales</p>
+              </div>
             </div>
           </div>
-          <div className="stat-item">
-            <FaMapMarkedAlt className="stat-icon" />
-            <div>
-              <h3>50+</h3>
-              <p>Destinos nacionales</p>
-            </div>
+        </section>
+
+        <section className="historia-section">
+          <h2>Nuestra Travesía</h2>
+          <div className="timeline">
+            <TimelineEvent
+              year="2013"
+              title="Humble Beginnings"
+              description="Primer viaje familiar desde El Espinal hasta el Caribe"
+            />
+            <TimelineEvent
+              year="2015"
+              title="Formalización"
+              description="Registro oficial como empresa turística"
+            />
+            <TimelineEvent
+              year="2020"
+              title="Expansión Nacional"
+              description="Cobertura en 32 departamentos"
+            />
+            <TimelineEvent
+              year="2024"
+              title="Reconocimiento Nacional"
+              description="Premio a la Innovación Turística"
+            />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Historia Corporativa */}
-      <section className="historia-section">
-        <h2>Nuestra Travesía</h2>
-        <div className="timeline">
-          <TimelineEvent
-            year="2013"
-            title="Humble Beginnings"
-            description="Primer viaje familiar desde El Espinal hasta el Caribe"
-          />
-          <TimelineEvent
-            year="2015"
-            title="Formalización"
-            description="Registro oficial como empresa turística"
-          />
-          <TimelineEvent
-            year="2020"
-            title="Expansión Nacional"
-            description="Cobertura en 32 departamentos"
-          />
-          <TimelineEvent
-            year="2024"
-            title="Reconocimiento Nacional"
-            description="Premio a la Innovación Turística"
-          />
-        </div>
-      </section>
+        <section className="equipo-section" ref={ref}>
+          <h2>El Alma de Piquitours</h2>
+          <div className="team-grid">
+            {team.map((member, index) => (
+              <TeamCard key={index} member={member} index={index} />
+            ))}
+          </div>
+        </section>
 
-      {/* Equipo */}
-      <section className="equipo-section" ref={ref}>
-        <h2>El Alma de Piquitours</h2>
-        <div className="team-grid">
-          {team.map((member, index) => (
-            <TeamCard key={index} member={member} index={index} />
-          ))}
-        </div>
-      </section>
-
-      {/* Filosofía */}
-      <section className="philosophy-section">
-        <h2>Nuestra Esencia</h2>
-        <div className="philosophy-grid">
-          <motion.div 
-            className="philosophy-item"
-            whileHover={{ scale: 1.05 }}
-          >
-            <FaHandshake className="philosophy-icon" />
-            <h3>Confianza Transparente</h3>
-            <p>Operamos con total transparencia en cada transacción</p>
-          </motion.div>
-          <motion.div 
-            className="philosophy-item"
-            whileHover={{ scale: 1.05 }}
-          >
-            <FaRocket className="philosophy-icon" />
-            <h3>Innovación Constante</h3>
-            <p>Sistemas de reservas y pagos de última generación</p>
-          </motion.div>
-        </div>
-      </section>
-      <Footer />
+        <section className="philosophy-section">
+          <h2>Nuestra Esencia</h2>
+          <div className="philosophy-grid">
+            <motion.div 
+              className="philosophy-item"
+              whileHover={{ scale: 1.05 }}
+            >
+              <FaHandshake className="philosophy-icon" />
+              <h3>Confianza Transparente</h3>
+              <p>Operamos con total transparencia en cada transacción</p>
+            </motion.div>
+            <motion.div 
+              className="philosophy-item"
+              whileHover={{ scale: 1.05 }}
+            >
+              <FaRocket className="philosophy-icon" />
+              <h3>Innovación Constante</h3>
+              <p>Sistemas de reservas y pagos de última generación</p>
+            </motion.div>
+          </div>
+        </section>
+        <Footer />
       </div>
-    </>
+    </main>
   );
 }

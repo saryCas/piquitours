@@ -2,7 +2,7 @@ import Header from "../components/Header";
 
 export default function Contacto() {
   return (
-    <div>
+    <main>
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -10,6 +10,6 @@ export default function Contacto() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

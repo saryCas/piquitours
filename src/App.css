@@ -1,3 +1,4 @@
+
 :root {
   --primary-color: #0077B6;
   --background-color-light: #FFFFFF;
@@ -14,7 +15,7 @@ body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  margin-top: 135px; /* Ajustar el margen superior para que el contenido no quede detrás del Header */
+  /* margin-top: 135px; Ajustar el margen superior para que el contenido no quede detrás del Header */
 }
 
 /* 
@@ -123,3 +124,4 @@ body {
   background-color: var(--primary-color);
   color: var(--background-color);
 }
+

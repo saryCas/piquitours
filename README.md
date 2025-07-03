@@ -11,10 +11,10 @@ Piquitours y Eventos es una plataforma que permite a los usuarios explorar, rese
 ## Características
 
 - Exploración de tours y eventos
-- Reservas en línea
-- Gestión de usuarios
-- Notificaciones y recordatorios
-- Integración con pasarelas de pago
+- Reservas en línea (en proceso)
+- Gestión de usuarios (en proceso)
+- Notificaciones y recordatorios (en proceso)
+- Integración con pasarelas de pago (en proceso)
 
 ## Instalación
 
@@ -44,29 +44,29 @@ Piquitours y Eventos es una plataforma que permite a los usuarios explorar, rese
    npm install -g pnpm
    ```
 
-   O usa `npm` directamente:
+   O usa `npm` directamente, si no tienes `pnpm` instalado o prefiere no instarlo:
 
    ```bash
    npm install
    ```
 
-4. Configura las variables de entorno en un archivo `.env`:
+<!-- 4. Configura las variables de entorno en un archivo `.env`:
 
    ```env
    DB_HOST=tu_host_de_base_de_datos
    DB_USER=tu_usuario_de_base_de_datos
    DB_PASS=tu_contraseña_de_base_de_datos
-   ```
+   ``` -->
 
-5. Inicia el servidor:
+4. Inicia el servidor:
 
-   Si usas `pnpm`:
+   Si usas (si lo instalo) `pnpm`:
 
    ```bash
    pnpm run dev
    ```
 
-   O con `npm`:
+   O con `npm` directamente:
 
    ```bash
    npm run dev
@@ -74,7 +74,7 @@ Piquitours y Eventos es una plataforma que permite a los usuarios explorar, rese
 
 ## Uso
 
-Accede a la aplicación en `http://localhost:5173` para explorar tours, realizar reservas y gestionar tu cuenta.
+Accede a la aplicación desde tu navegador ingresando `http://localhost:5173` para visualizar la página web y realizar modificaciones. 
 
 ## Tecnologías Utilizadas
 
@@ -101,4 +101,4 @@ Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENS
 
 ---
 
-<a href='https://github.com/rx3card'>rx3card Oscar Rojas.</a>
+<!-- <a href='https://github.com/rx3card'>rx3card Oscar Rojas.</a> -->
