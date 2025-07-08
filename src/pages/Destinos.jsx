@@ -2,7 +2,7 @@ import Header from "../components/Header";
 
 export default function Destinos() {
   return (
-    <div>
+    <main>
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -10,6 +10,6 @@ export default function Destinos() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

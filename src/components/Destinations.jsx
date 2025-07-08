@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiArrowUpRight, FiStar } from 'react-icons/fi';
+import { FiArrowUpRight } from 'react-icons/fi';
 import './styles/Destinations.css';
 
-const DestinationCard = ({ destination, index }) => {
+// Memoizamos el componente para evitar re-renderizados innecesarios
+const DestinationCard = React.memo(({ destination, index }) => {
   return (
     <motion.div
       className="destination-card"
@@ -17,7 +19,6 @@ const DestinationCard = ({ destination, index }) => {
         stiffness: 90
       }}
     >
-      {/* Efectos de brillo dinámicos */}
       {[...Array(2)].map((_, i) => (
         <div 
           key={i}
@@ -34,11 +35,11 @@ const DestinationCard = ({ destination, index }) => {
         <img 
           src={destination.image} 
           alt={destination.title}
-          loading="lazy"
+          loading="lazy" // Carga perezosa
         />
         
         <div className="rating-badge">
-           ⭐
+          ⭐
           <span>{destination.rating}</span>
         </div>
       </div>
@@ -63,12 +64,11 @@ const DestinationCard = ({ destination, index }) => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Conoce mas
+          Conoce más
           <FiArrowUpRight style={{ fontSize: '1.4rem' }} />
         </motion.button>
       </div>
 
-      {/* Partículas flotantes */}
       {[...Array(5)].map((_, i) => (
         <div 
           key={i}
@@ -85,7 +85,7 @@ const DestinationCard = ({ destination, index }) => {
       ))}
     </motion.div>
   );
-};
+});
 
 const Destinations = () => {
   const destinations = [
@@ -99,35 +99,35 @@ const Destinations = () => {
     {
       title: "",
       description: "Caminata épica de 5 días hacia la ciudad perdida, incluye camping de lujo",
-      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Felcomercio.pe%2Frespuestas%2Fcuando%2Fdia-mundial-de-la-leche-desde-cuando-y-por-que-se-celebra-tdpe-noticia%2F&psig=AOvVaw1bJiwlKappDXsnfv0i9zcO&ust=1751499057366000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDoosvonI4DFQAAAAAdAAAAABAE",
+      image: "https://via.placeholder.com/600x400?text=Tesoro+Tayrona", // Reemplaza con una URL válida
       rating: 4.8,
       price: 0
     },
     {
       title: "Paraíso Caribe",
       description: "Tour de 10 días por las playas más espectaculares del Caribe colombiano",
-      image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f",
+      image: "https://via.placeholder.com/600x400?text=Paraíso+Caribe", // Reemplaza con una URL válida
       rating: 5.0,
       price: 0
     },
     {
       title: "Lorem ipsum dolor sit amet",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.",
-      image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f",
+      image: "https://via.placeholder.com/600x400?text=Destino+4", // Reemplaza con una URL válida
       rating: 5.0,
       price: 0
     },
     {
       title: "Lorem ipsum dolor sit amet",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.",
-      image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f",
+      image: "https://via.placeholder.com/600x400?text=Destino+5", // Reemplaza con una URL válida
       rating: 5.0,
       price: 0
     },
     {
       title: "Lorem ipsum dolor sit amet",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.",
-      image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f",
+      image: "https://via.placeholder.com/600x400?text=Destino+6", // Reemplaza con una URL válida
       rating: 5.0,
       price: 0
     }
@@ -149,3 +149,4 @@ const Destinations = () => {
 };
 
 export default Destinations;
+
