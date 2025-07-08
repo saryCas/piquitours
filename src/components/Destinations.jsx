@@ -90,14 +90,14 @@ const DestinationCard = ({ destination, index }) => {
 const Destinations = () => {
   const destinations = [
     {
-      title: "Expedición Amazonas",
-      description: "Aventura de 7 días en la selva con alojamiento premium y guías expertos",
+      title: "ALTOS DE GUATAPÉ",
+      description: "Disfruta de dos días y una noche visitando las zonas más emblemáticas de Medellín y sus alrededores",
       image: "/p7.jpeg",
       rating: 4.9,
-      price: 0
+      price: 420.000
     },
     {
-      title: "Tesoro Tayrona",
+      title: "",
       description: "Caminata épica de 5 días hacia la ciudad perdida, incluye camping de lujo",
       image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Felcomercio.pe%2Frespuestas%2Fcuando%2Fdia-mundial-de-la-leche-desde-cuando-y-por-que-se-celebra-tdpe-noticia%2F&psig=AOvVaw1bJiwlKappDXsnfv0i9zcO&ust=1751499057366000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDoosvonI4DFQAAAAAdAAAAABAE",
       rating: 4.8,
