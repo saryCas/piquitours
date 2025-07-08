@@ -28,7 +28,7 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-section">
           <img 
-            src="/logo.webp" 
+            src="/logo_entero.png" 
             alt="Piquitours Logo" 
             className="footer-logo"
           />
