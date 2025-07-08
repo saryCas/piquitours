@@ -90,14 +90,14 @@ const DestinationCard = React.memo(({ destination, index }) => {
 const Destinations = () => {
   const destinations = [
     {
-      title: "Expedición Amazonas",
-      description: "Aventura de 7 días en la selva con alojamiento premium y guías expertos",
-      image: "p7.jpeg",
+      title: "ALTOS DE GUATAPÉ",
+      description: "Disfruta de dos días y una noche visitando las zonas más emblemáticas de Medellín y sus alrededores",
+      image: "/p7.jpeg",
       rating: 4.9,
-      price: 0
+      price: 420.000
     },
     {
-      title: "Tesoro Tayrona",
+      title: "",
       description: "Caminata épica de 5 días hacia la ciudad perdida, incluye camping de lujo",
       image: "https://via.placeholder.com/600x400?text=Tesoro+Tayrona", // Reemplaza con una URL válida
       rating: 4.8,
