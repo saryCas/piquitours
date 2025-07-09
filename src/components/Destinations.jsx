@@ -108,14 +108,14 @@ const Destinations = () => {
       description: "Entre corales y brisa, San Andrés te enamora",
       image: "sanandres2.jpg", // Reemplaza con una URL válida
       rating: 5.0,
-      price: 1,700,000
+      price: "1,700,000"
     },
     {
       title: "TRES DESTINOS",
       description: "Paisajes que inspiran, emociones que aceleran: así se vive el Quindío.",
-      image: "", // Reemplaza con una URL válida
+      image: "quindio.jpg", // Reemplaza con una URL válida
       rating: 5.0,
-      price: 0
+      price: "450,000"
     },
     {
       title: "Lorem ipsum dolor sit amet",
