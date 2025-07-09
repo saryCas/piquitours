@@ -92,7 +92,7 @@ const Destinations = () => {
     {
       title: "ALTOS DE GUATAPÉ",
       description: "Disfruta de dos días y una noche visitando las zonas más emblemáticas de Medellín y sus alrededores",
-      image: "/p7.jpeg",
+      image: "/guatap2.jpeg",
       rating: 4.9,
       price: "420,000"
     },
