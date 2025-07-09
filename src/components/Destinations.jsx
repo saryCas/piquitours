@@ -106,7 +106,7 @@ const Destinations = () => {
     {
       title: "MAR DE SIETE COLORES",
       description: "Entre corales y brisa, San Andrés te enamora",
-      image: "sanandres2.jpg", // Reemplaza con una URL válida
+      image: "sanandres2.jpeg", // Reemplaza con una URL válida
       rating: 5.0,
       price: "1,700,000"
     },
@@ -118,9 +118,9 @@ const Destinations = () => {
       price: "450,000"
     },
     {
-      title: "Lorem ipsum dolor sit amet",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.",
-      image: "https://via.placeholder.com/600x400?text=Destino+5", // Reemplaza con una URL válida
+      title: "VAMOS PA'L PUEBLO",
+      description: "Boyacá: Donde cada rincón tiene una historia, y cada paisaje, un suspiro",
+      image: "", // Reemplaza con una URL válida
       rating: 5.0,
       price: 0
     },
