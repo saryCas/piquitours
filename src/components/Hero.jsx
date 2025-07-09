@@ -117,11 +117,11 @@ export default function Hero() {
         </button>
       </div>
       <div className="redes-sociales">
-        <a href="https://facebook.com" target="_blank" rel="noreferrer">
+        <a href="https://www.facebook.com/share/1AiMVjLLDs/" target="_blank" rel="noreferrer">
           <FaFacebook />
           <span>Facebook</span>
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+        <a href="https://www.instagram.com/piquitours?igsh=OThpM2EyajhwaGNt" target="_blank" rel="noreferrer">
           <FaInstagram />
           <span>Instagram</span>
         </a>
