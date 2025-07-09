@@ -90,30 +90,30 @@ const DestinationCard = React.memo(({ destination, index }) => {
 const Destinations = () => {
   const destinations = [
     {
-      title: "ALTOS DE GUATAPÉ",
-      description: "Disfruta de dos días y una noche visitando las zonas más emblemáticas de Medellín y sus alrededores",
+      title: "ARRÁS DE CIELO",
+      description: "Peñol y Guatapé, dos razones para enamorarte de Antioquia.",
       image: "/guatap2.jpeg",
       rating: 4.9,
       price: "420,000"
     },
     {
       title: "SABOR CARIBE",
-      description: "Descubre durante siete días y seis noches la frescura de las más hermosas playas colombianas",
+      description: "Barú, Rodadero y Cartagena: tres joyas, un solo paraíso.",
       image: "/baru.jpeg", // Reemplaza con una URL válida
       rating: 4.8,
       price: "850,000"
     },
     {
-      title: "Paraíso Caribe",
-      description: "Tour de 10 días por las playas más espectaculares del Caribe colombiano",
-      image: "https://via.placeholder.com/600x400?text=Paraíso+Caribe", // Reemplaza con una URL válida
+      title: "MAR DE SIETE COLORES",
+      description: "Entre corales y brisa, San Andrés te enamora",
+      image: "sanandres2.jpg", // Reemplaza con una URL válida
       rating: 5.0,
-      price: 0
+      price: 1,700,000
     },
     {
-      title: "Lorem ipsum dolor sit amet",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.",
-      image: "https://via.placeholder.com/600x400?text=Destino+4", // Reemplaza con una URL válida
+      title: "TRES DESTINOS",
+      description: "Paisajes que inspiran, emociones que aceleran: así se vive el Quindío.",
+      image: "", // Reemplaza con una URL válida
       rating: 5.0,
       price: 0
     },
