@@ -97,11 +97,11 @@ const Destinations = () => {
       price: "420,000"
     },
     {
-      title: "",
-      description: "Caminata épica de 5 días hacia la ciudad perdida, incluye camping de lujo",
-      image: "https://via.placeholder.com/600x400?text=Tesoro+Tayrona", // Reemplaza con una URL válida
+      title: "SABOR CARIBE",
+      description: "Descubre durante siete días y seis noches la frescura de las más hermosas playas colombianas",
+      image: "/baru.jpeg", // Reemplaza con una URL válida
       rating: 4.8,
-      price: 0
+      price: "850,000"
     },
     {
       title: "Paraíso Caribe",
